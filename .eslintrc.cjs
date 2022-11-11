@@ -16,7 +16,9 @@ module.exports = {
   },
   plugins: ["react", "prettier"],
   rules: {
-      "no-console": 0,
-      "react-hooks/exhaustive-deps": 0,
+    "no-console": 0,
+    "react-hooks/exhaustive-deps": 0,
+    "react/function-component-definition": 0,
+    "react/react-in-jsx-scope": 0,
   },
 };
