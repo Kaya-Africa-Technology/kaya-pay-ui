@@ -1,4 +1,4 @@
-import { CssBaseline } from "@mui/material";
+import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
@@ -12,7 +12,6 @@ import Client from "./pages/Client/ClientDashboard";
 function App() {
   return (
     <div className="App">
-      <CssBaseline />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
