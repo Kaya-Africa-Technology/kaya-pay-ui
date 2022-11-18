@@ -1,4 +1,4 @@
-import "./TextInput.css"
+import "./TextInput.css";
 import { useState } from "react";
 
 const TextInputField = (props) => {
@@ -9,9 +9,10 @@ const TextInputField = (props) => {
     setFocused(true);
   };
   return (
-    <div className="reTextInput">
-    <label>{label}</label>
+    <div className="flex flex-col reTextInput">
+      <label className="text-xs">{label}</label>
       <input
+        className="form-input"
         {...inputProps}
         onChange={onChange}
         onBlur={handleFocus}

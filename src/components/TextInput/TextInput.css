@@ -1,4 +1,4 @@
-input:focus-visible{
+/* input:focus-visible{
     -webkit-appearance: none;
     appearance: none;
     outline: 1px solid #00000000;;
@@ -8,7 +8,7 @@ input:focus-visible{
     margin: 10px auto;
     display: flex;
     flex-direction: column;
-}
+} */
 
 .error-message{
     font-size: 12px;
@@ -16,17 +16,17 @@ input:focus-visible{
     padding-top: 3px;
     display: none;
 }
-.reTextInput input{
+/* .reTextInput input{
     background: #FFFFFF;
     border: 1px solid #000000;
     box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.06);
     border-radius: 6px;
     padding: 15px;
-}
+} */
 
-.reTextInput input:active{
+/* .reTextInput input:active{
     border: 2px solid #000000;
-}
+} */
 .reTextInput input:invalid[focused="true"]{
     border: 1px solid crimson;
 }
