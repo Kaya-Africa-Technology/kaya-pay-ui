@@ -29,8 +29,11 @@ After you're finished please remove all the comments and instructions!
 
   <h3><b>Kaya Pay README</b></h3>
 
+![Issues](https://img.shields.io/github/issues-raw/Kaya-Africa-Technology/kaya-pay-ui?style=for-the-badge)
+![Pull Requests](https://img.shields.io/github/issues-pr/Kaya-Africa-Technology/kaya-pay-ui?style=for-the-badge)
+![Repo size](https://img.shields.io/github/repo-size/Kaya-Africa-Technology/kaya-pay-ui?style=for-the-badge)
+![Contributors](https://img.shields.io/github/contributors/Kaya-Africa-Technology/kaya-pay-ui?style=for-the-badge)
 </div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
