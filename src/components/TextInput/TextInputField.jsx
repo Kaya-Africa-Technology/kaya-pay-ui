@@ -1,25 +1,38 @@
 import "./TextInput.css";
-import { useState } from "react";
+// import { useState } from "react";
 
 const TextInputField = (props) => {
-  const [focused, setFocused] = useState(false);
-  const { label, errorMessage, onChange, id, ...inputProps } = props;
+  // const [focused, setFocused] = useState(false);
+  const {
+    label,
+    errorMessage,
+    onChange,
+    id,
+    name,
+    type,
+    placeholder,
+    required,
+    pattern,
+  } = props;
 
-  const handleFocus = (e) => {
-    setFocused(true);
-  };
+  // const handleFocus = () => {
+  //   setFocused(true);
+  // };
   return (
-    <div className="flex flex-col reTextInput">
-      <label className="text-xs">{label}</label>
+    <div className="reTextInput flex flex-col">
+      <label htmlFor={id} className="text-xs">
+        {label}
+      </label>
       <input
         className="form-input"
-        {...inputProps}
+        name={name}
+        type={type}
+        placeholder={placeholder}
+        required={required}
+        pattern={pattern}
         onChange={onChange}
-        onBlur={handleFocus}
-        // onFocus={() =>
-        //   inputProps.name === "confirmPassword" && setFocused(true)
-        // }
-        focused={focused.toString()}
+        // onBlur={handleFocus}
+        // focused={focused.toString()}
       />
       <span className="error-message">{errorMessage}</span>
     </div>

@@ -3,14 +3,13 @@ import { Routes, Route } from "react-router-dom";
 
 // Import Pages
 import Admin from "./pages/Admin/AdminDashboard";
-import Login from "./pages/Auth/Login/";
+import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Transporter from "./pages/Transporter/TransporterDashboard";
 import Client from "./pages/Client/ClientDashboard";
 
 function App() {
   return (
-
     <div className="App">
       <Routes>
         <Route path="/login" element={<Login />} />

@@ -43,17 +43,27 @@ const Login = () => {
 
   return (
     <div className="login-form">
-      <form>
+      <form onSubmit={handleSubmit}>
         {inputFields.map((input) => (
           <TextInputField
             key={input.id}
-            {...input}
+            label={input.label}
+            name={input.name}
+            type={input.type}
+            placeholder={input.placeholder}
+            required={input.required}
+            pattern={input.pattern}
             value={values[input.name]}
             onChange={onChange}
           />
         ))}
 
-        <button type="submit">Sign In</button>
+        <button
+          className="bg-black-500 hover:bg-black-700 rounded py-2 px-4 font-bold text-white"
+          type="submit"
+        >
+          Sign In
+        </button>
       </form>
     </div>
   );
