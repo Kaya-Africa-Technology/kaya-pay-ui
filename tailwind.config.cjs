@@ -18,7 +18,7 @@ module.exports = {
       white: "#FFFFFF",
     },
     fontFamily: {
-      sans: ["Roboto"],
+      sans: ["Roboto", "Lato"],
     },
     extend: {},
   },

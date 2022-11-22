@@ -2,12 +2,12 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 // Import Pages
-import Admin from "./pages/Admin/AdminDashboard";
-import Login from "./pages/Auth/Login";
-import Register from "./pages/Auth/Register";
-import Transporter from "./pages/Transporter/TransporterDashboard";
-import Client from "./pages/Client/ClientDashboard";
-import PreRegister from "./pages/Auth/PreRegister/Index";
+import Admin from "./pages/admin/AdminDashboard";
+import Login from "./pages/auth/login";
+import Register from "./pages/auth/Register";
+import Transporter from "./pages/transporter/TransporterDashboard";
+import Client from "./pages/client/ClientDashboard";
+import PreRegister from "./pages/auth/preregister/Index";
 
 function App() {
   return (
