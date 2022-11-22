@@ -1,36 +1,32 @@
-import { CssBaseline } from "@mui/material";
-import { ThemeProvider ,createTheme } from "@mui/material";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 // Import Pages
-import Admin from "./pages/Admin/AdminDashboard";
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register";
-import Transporter from "./pages/Transporter/TransporterDashboard";
-import Client from "./pages/Client/ClientDashboard";
+import Admin from "./pages/admin/AdminDashboard";
+import Login from "./pages/auth/login";
+import Register from "./pages/auth/Register";
+import Transporter from "./pages/transporter/TransporterDashboard";
+import Client from "./pages/client/ClientDashboard";
+import PreRegister from "./pages/auth/preregister/Index";
+import ResetPassword from "./pages/auth/reset";
 
 function App() {
-  const theme = createTheme({
-    typography: {
-      fontFamily: [
-        'inter',
-      ].join(','),
-    },});
   return (
-    <ThemeProvider theme={theme}>
     <div className="App">
-      <CssBaseline />
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route index path="/" element={<h1>Home</h1>} />
+        <Route path="/auth/">
+          <Route path="login" element={<Login />} />
+          <Route path="pre-register" element={<PreRegister />} />
+          <Route path="register" element={<Register />} />
+          <Route path="resetpassword" element={<ResetPassword />} />
+        </Route>
         <Route path="/admin" element={<Admin />} />
         <Route path="/client" element={<Client />} />
         <Route path="/transporter" element={<Transporter />} />
         <Route path="*" element={<h1>404: Not found </h1>} />
       </Routes>
-      </div>
-    </ThemeProvider>
+    </div>
   );
 }
 

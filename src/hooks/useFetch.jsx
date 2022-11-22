@@ -9,8 +9,11 @@ const useFetch = (url) => {
     const controller = new AbortController();
     const fetchData = async () => {
       setIsPending(true);
+
       try {
-        const response = await fetch(url, { signal: controller.signal });
+        const response = await fetch(url, {
+          signal: controller.signal,
+        });
         if (!response.ok) {
           throw new Error(response.statusText);
         }
@@ -18,8 +21,8 @@ const useFetch = (url) => {
         setIsPending(false);
         setData(json);
         setError(null);
-      } catch (error) {
-        if (error.name === "AbortError") {
+      } catch (err) {
+        if (err.name === "AbortError") {
           console.error("The fetch was aborted");
         } else {
           setIsPending(false);
