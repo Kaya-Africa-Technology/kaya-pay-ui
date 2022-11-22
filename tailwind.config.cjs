@@ -8,7 +8,7 @@ module.exports = {
       neutral: {
         90: "#211814",
         60: "#666666",
-        25: "#BFBFBF",
+        25: "#F3F3F1",
       },
       warning: "#FFD970",
       success: "#51D899",
