@@ -1,6 +1,6 @@
 import { useState } from "react";
-import TextInputField from "../../../components/shared/TextInput/TextInputField";
-import "./Login.css";
+import TextInputField from "../../components/shared/textinput/TextInputField";
+// import "./Login.css";
 
 const Login = () => {
   const [values, setValues] = useState({

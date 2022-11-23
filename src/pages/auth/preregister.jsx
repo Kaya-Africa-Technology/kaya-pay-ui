@@ -1,4 +1,4 @@
-import Button from "../../../components/shared/button/Button";
+import Button from "../../components/shared/button";
 
 const PreRegister = () => {
   return (

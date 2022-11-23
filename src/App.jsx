@@ -4,11 +4,11 @@ import { Routes, Route } from "react-router-dom";
 // Import Pages
 import Admin from "./pages/admin/AdminDashboard";
 import Login from "./pages/auth/login";
-import Register from "./pages/auth/Register";
 import Transporter from "./pages/transporter/TransporterDashboard";
 import Client from "./pages/client/ClientDashboard";
-import PreRegister from "./pages/auth/preregister/Index";
-import ResetPassword from "./pages/auth/reset";
+import PreRegister from "./pages/auth/preregister";
+import ResetPassword from "./pages/auth/resetpassword";
+import RegisterUser from "./pages/auth/registeruser";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/auth/">
           <Route path="login" element={<Login />} />
           <Route path="pre-register" element={<PreRegister />} />
-          <Route path="register" element={<Register />} />
+          <Route path="register" element={<RegisterUser />} />
           <Route path="resetpassword" element={<ResetPassword />} />
         </Route>
         <Route path="/admin" element={<Admin />} />

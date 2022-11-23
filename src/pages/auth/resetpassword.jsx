@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import TextInputField from "../../../components/shared/textinput/TextInputField";
+import TextInputField from "../../components/shared/textinput/TextInputField";
 
 const ResetPassword = () => {
   return (
@@ -16,7 +16,7 @@ const ResetPassword = () => {
               placeholder="Enter your Email Address to get a link to reset your Password"
             />
             <button
-              className="my-10 rounded-md bg-neutral-90 py-2 text-center font-roboto text-white"
+              className="my-10 rounded-md bg-neutral-90 py-2 text-center font-roboto font-medium leading-6 text-white"
               type="submit"
             >
               Send reset password link
