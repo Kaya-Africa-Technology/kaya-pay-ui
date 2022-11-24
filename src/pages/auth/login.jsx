@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TextInputField from "../../components/shared/textinput/TextInputField";
+import TextInputField from "../../Components/Shared/textinput/TextInputField";
 // import "./Login.css";
 
 const Login = () => {

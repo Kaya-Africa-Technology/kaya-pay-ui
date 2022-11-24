@@ -1,41 +1,35 @@
-import Button from "../../components/shared/button";
+import Button from "../../Components/Shared";
+import AuthSideImage from "../../Components/Shared/AuthSideImage";
 
 const PreRegister = () => {
   return (
-    <div className="flex overflow-hidden bg-neutral-25">
-      <div
-        className="width-1/2 from-transparent via-transparent to-slate-800 flex flex-1 items-end bg-gradient-to-b bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url("/images/trucks.jpg")`,
-        }}
-      >
-        <p className="mb-[90px] break-words px-10 align-text-bottom  font-lato text-xl text-white">
-          Save delivery costs and increase driver efficiency with our end-to-end
-          Pickup and delivery software.
-        </p>
-      </div>
-      <div className="width-1/2 flex-1 flex-col">
-        <img src="/kaya_logo.svg" alt="Kaya logo" className="ml-10 mt-4 w-24" />
-        <div className="container mx-auto px-10">
-          <div className="flex h-screen flex-col items-center justify-center ">
-            <h2>Sign Up</h2>
-            <div className="content-between justify-between">
-              <Button
-                img="/icons/facebook.svg"
-                alt="facebook logo"
-                text="continue with Facebook"
-              />
-              <Button
-                img="/icons/email.svg"
-                alt="email logo"
-                text="continue with Email"
-              />
-              <Button
-                img="/icons/google.svg"
-                alt="Google logo"
-                text="continue with Google"
-              />
-            </div>
+    <div className="flex h-screen overflow-hidden bg-neutral-25">
+      <AuthSideImage
+        image="/images/trucks.jpg"
+        text="Save delivery costs and increase driver efficiency with our end-to-end Pickup and delivery software."
+      />
+      <div className="flex-1">
+        <div className="container mx-auto ml-10 mt-5">
+          <img src="/kaya_logo.svg" alt="Kaya logo" className="w-24" />
+        </div>
+        <div className="flex h-screen items-center justify-center align-middle">
+          <div className="flex w-11/12 flex-col space-y-6 md:w-3/5">
+            <h2 className="mb-6 text-center text-3xl font-bold">Sign Up</h2>
+            <Button
+              img="/icons/email.svg"
+              alt="email logo"
+              text="continue with Email"
+            />
+            <Button
+              img="/icons/google.svg"
+              alt="email logo"
+              text="continue with Google"
+            />
+            <Button
+              img="/icons/facebook.svg"
+              alt="email logo"
+              text="continue with Facebook"
+            />
           </div>
         </div>
       </div>

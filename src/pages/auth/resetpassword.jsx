@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import TextInputField from "../../components/shared/textinput/TextInputField";
+import TextInputField from "../../Components/Shared/textinput/TextInputField";
 
 const ResetPassword = () => {
   return (
