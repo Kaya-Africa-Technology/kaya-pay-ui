@@ -2,3 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .btn-primary{
+        @apply my-10 rounded-md bg-neutral-90 py-2 text-center font-roboto font-medium leading-6 text-white
+    }
+    .link{
+       @apply font-bold underline-offset-4 transition delay-150 ease-in-out  hover:underline hover:transition
+    }
+}
