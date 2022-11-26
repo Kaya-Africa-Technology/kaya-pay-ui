@@ -13,7 +13,7 @@ const ResetPassword = () => {
             <h2 className="mb-6 text-center text-3xl font-bold">
               Reset your Password
             </h2>
-            <form className="flex flex-col content-between justify-between">
+            <form className="flex flex-col  content-between justify-between gap-y-4">
               <TextInputField
                 label="Email Address"
                 placeholder="Enter your Email Address to get a link to reset your Password"

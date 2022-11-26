@@ -55,8 +55,8 @@ const Login = () => {
             <h2 className="mb-6 text-center text-3xl font-bold">
               Hi, Welcome back
             </h2>
-            <div className="login-form">
-              <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
+              <div className="flex flex-col gap-y-4">
                 {inputFields.map((input) => (
                   <TextInputField
                     key={input.id}
@@ -81,14 +81,14 @@ const Login = () => {
                 <button className="btn-primary w-full" type="submit">
                   Login
                 </button>
-              </form>
-              <p className="text-center">
-                Don’t have an account?{" "}
-                <Link className="link" to="/auth/register">
-                  Sign up
-                </Link>
-              </p>
-            </div>
+              </div>
+            </form>
+            <p className="text-center">
+              Don’t have an account?{" "}
+              <Link className="link" to="/auth/register">
+                Sign up
+              </Link>
+            </p>
           </div>
         </div>
       </div>
