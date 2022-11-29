@@ -9,7 +9,6 @@ const useFetch = (url) => {
     const controller = new AbortController();
     const fetchData = async () => {
       setIsPending(true);
-
       try {
         const response = await fetch(url, {
           signal: controller.signal,
@@ -35,7 +34,7 @@ const useFetch = (url) => {
     return () => {
       controller.abort();
     };
-  }, [data]);
+  }, [data, error.message, url]);
 
   return { data, isPending, error };
 };

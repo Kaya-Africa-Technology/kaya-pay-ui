@@ -1,4 +1,15 @@
+import { useState } from "react";
+import OtpInput from "react-otp-input";
+
 const VerifyEmail = () => {
+  const [otp, setOtp] = useState(null);
+  // const [error, setError] = useState(false);
+
+  const handleOtp = (e) => setOtp(e);
+  const handleSubmit = () => {
+    // handle Error state
+  };
+  console.log("otp", otp);
   return (
     <div className="flex h-screen">
       <div className="relative flex-1">
@@ -10,13 +21,43 @@ const VerifyEmail = () => {
             <h2 className="text-center text-3xl font-bold">
               Please check your email
             </h2>
-            <p className="mb-6 text-center">
+            <p className="mb-12 text-center">
               We have sent a code to daniel@gmail.com
             </p>
-            {/* OTP input */}
-            <button className="btn-primary" type="submit">
-              Verify
-            </button>
+            <form onSubmit={handleSubmit}>
+              <div className="my-4 flex flex-col">
+                <OtpInput
+                  numInputs={6}
+                  containerStyle="otpContainer"
+                  isInputNum
+                  shouldAutoFocus
+                  // hasErrored={!!error}
+                  inputStyle={{
+                    border: "1px solid #211814",
+                    borderRadius: "5px",
+                    width: "54px",
+                    height: "60px",
+                    fontSize: "14px",
+                    color: "#000",
+                    backgroundColor: "#F3F3F11a",
+                    fontWeight: "400",
+                    caretColor: "blue",
+                  }}
+                  focusStyle={{
+                    border: "1px solid #000",
+                    boxShadow: "0px 0px 10px 0px #0000003f",
+                  }}
+                  errorStyle={{
+                    border: "1px solid #DE330D",
+                  }}
+                  onChange={(e) => handleOtp(e)}
+                  value={otp}
+                />
+                <button className="btn-primary" type="submit">
+                  Verify
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
