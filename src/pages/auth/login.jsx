@@ -1,5 +1,9 @@
 import { useState } from "react";
-import TextInputField from "../../Components/Shared/textinput/TextInputField";
+import { Link } from "react-router-dom";
+import TextInputField from "../../components/Shared/Textinput/TextInputField";
+
+import AuthSideImage from "../../Components/Shared/AuthSideImage";
+import SubmitButton from "../../Components/Shared/Buttons/SubmitButton";
 // import "./Login.css";
 
 const Login = () => {
@@ -42,29 +46,55 @@ const Login = () => {
   };
 
   return (
-    <div className="login-form">
-      <form onSubmit={handleSubmit}>
-        {inputFields.map((input) => (
-          <TextInputField
-            key={input.id}
-            label={input.label}
-            name={input.name}
-            type={input.type}
-            placeholder={input.placeholder}
-            required={input.required}
-            pattern={input.pattern}
-            value={values[input.name]}
-            onChange={onChange}
-          />
-        ))}
-
-        <button
-          className="bg-black-500 hover:bg-black-700 rounded py-2 px-4 font-bold text-white"
-          type="submit"
-        >
-          Sign In
-        </button>
-      </form>
+    <div className="flex h-screen bg-neutral-25">
+      <div className="relative flex-1">
+        <div className="absolute top-5 left-5">
+          <img src="/kaya_logo.svg" alt="Kaya logo" className="w-18" />
+        </div>
+        <div className="flex h-screen items-center justify-center align-middle">
+          <div className="flex w-11/12 flex-col space-y-6 md:w-3/5">
+            <h2 className="mb-6 text-center text-3xl font-bold">
+              Hi, Welcome back
+            </h2>
+            <form onSubmit={handleSubmit}>
+              <div className="flex flex-col gap-y-4">
+                {inputFields.map((input) => (
+                  <TextInputField
+                    key={input.id}
+                    label={input.label}
+                    name={input.name}
+                    type={input.type}
+                    placeholder={input.placeholder}
+                    required={input.required}
+                    pattern={input.pattern}
+                    value={values[input.name]}
+                    onChange={onChange}
+                  />
+                ))}
+                <p className="text-right">
+                  <Link
+                    className="text-right font-lato font-normal text-neutral-60 underline-offset-4 hover:underline"
+                    to="/auth/resetpassword"
+                  >
+                    Forgot your password?
+                  </Link>
+                </p>
+                <SubmitButton text="Sign In" type="submit" />
+              </div>
+            </form>
+            <p className="text-center">
+              Don’t have an account?{" "}
+              <Link className="link" to="/auth/register">
+                Sign up
+              </Link>
+            </p>
+          </div>
+        </div>
+      </div>
+      <AuthSideImage
+        image="/images/truck.jpg"
+        text="We provide exceptional customer experience with hassle-free booking, real-tracking and automated dispatch."
+      />
     </div>
   );
 };

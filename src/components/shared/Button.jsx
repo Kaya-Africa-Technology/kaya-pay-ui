@@ -1,7 +1,7 @@
 const Button = ({ img, alt, text }) => {
   return (
     <button
-      className="bg-gray-300 border-gray-500 hover:bg-sky-700 flex w-full items-center justify-center rounded-md border-2 bg-opacity-10 px-5 py-4 uppercase shadow"
+      className="bg-gray-300 border-gray-500 hover:bg-sky-700 flex w-full items-center justify-center rounded-md border-2 bg-opacity-10 px-5 py-4 text-center text-base font-normal uppercase shadow"
       type="button"
     >
       <span className="flex items-center justify-between">
@@ -12,7 +12,7 @@ const Button = ({ img, alt, text }) => {
           src={img}
           alt={alt}
         />
-        <span className="text-center text-lg font-medium">{text}</span>
+        {text}
       </span>
     </button>
   );

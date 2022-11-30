@@ -35,7 +35,7 @@ const useFetch = (url) => {
     return () => {
       controller.abort();
     };
-  }, [data]);
+  }, [data, error.message, url]);
 
   return { data, isPending, error };
 };

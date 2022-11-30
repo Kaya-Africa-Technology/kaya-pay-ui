@@ -1,4 +1,4 @@
-import "./TextInput.css";
+// import "./TextInput.css";
 // import { useState } from "react";
 
 const TextInputField = (props) => {
@@ -6,34 +6,44 @@ const TextInputField = (props) => {
   const {
     label,
     errorMessage,
-    onChange,
     id,
     name,
     type,
     placeholder,
     required,
-    pattern,
+    isDisabled,
+    isReadOnly,
   } = props;
 
   // const handleFocus = () => {
   //   setFocused(true);
   // };
   return (
-    <div className="reTextInput flex flex-col">
-      <label htmlFor={id} className="text-xs">
+    <div>
+      <label htmlFor={id} className="font-medium">
         {label}
       </label>
       <input
+        id={id}
+        name={name}
+        className="input"
+        required={required}
+        readOnly={isReadOnly}
+        disabled={isDisabled}
+        placeholder={placeholder}
+        type={type}
+      />
+      {/* <input
         className="form-input"
         name={name}
         type={type}
         placeholder={placeholder}
         required={required}
         pattern={pattern}
-        onChange={onChange}
-        // onBlur={handleFocus}
+        onChange={onChange} */}
+      {/* // onBlur={handleFocus}
         // focused={focused.toString()}
-      />
+      /> */}
       <span className="error-message">{errorMessage}</span>
     </div>
   );
