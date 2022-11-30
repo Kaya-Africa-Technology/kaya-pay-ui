@@ -14,7 +14,9 @@ const PreRegister = () => {
         </div>
         <div className="flex h-screen items-center justify-center align-middle">
           <div className="flex w-11/12 flex-col space-y-6 md:w-3/5">
-            <h2 className="mb-6 text-center text-3xl font-bold">Sign Up</h2>
+            <h2 className="mb-6 text-center text-4xl font-extrabold">
+              Sign Up
+            </h2>
             <Button
               img="/icons/email.svg"
               alt="email logo"

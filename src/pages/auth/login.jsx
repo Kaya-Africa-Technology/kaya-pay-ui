@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import TextInputField from "../../components/Shared/Textinput/TextInputField";
 
 import AuthSideImage from "../../Components/Shared/AuthSideImage";
+import SubmitButton from "../../Components/Shared/Buttons/SubmitButton";
 // import "./Login.css";
 
 const Login = () => {
@@ -72,15 +73,13 @@ const Login = () => {
                 ))}
                 <p className="text-right">
                   <Link
-                    className=" text-right font-lato font-normal text-neutral-60 underline-offset-4 hover:underline"
+                    className="text-right font-lato font-normal text-neutral-60 underline-offset-4 hover:underline"
                     to="/auth/resetpassword"
                   >
                     Forgot your password?
                   </Link>
                 </p>
-                <button className="btn-primary w-full" type="submit">
-                  Login
-                </button>
+                <SubmitButton text="Sign In" type="submit" />
               </div>
             </form>
             <p className="text-center">

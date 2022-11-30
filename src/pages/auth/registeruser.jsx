@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AuthSideImage from "../../Components/Shared/AuthSideImage";
+import SubmitButton from "../../Components/Shared/Buttons/SubmitButton";
 import TextInputField from "../../components/Shared/Textinput/TextInputField";
 
 const RegisterUser = () => {
@@ -48,9 +49,7 @@ const RegisterUser = () => {
                 <p className="text-left text-xs">
                   by clicking sign up you agree to the terms and conditions
                 </p>
-                <button className="btn-primary w-full" type="submit">
-                  Sign up
-                </button>
+                <SubmitButton text="Sign up" type="submit" />
               </form>
               <p className="text-center">
                 Already have an account?{" "}

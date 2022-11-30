@@ -1,5 +1,6 @@
 import { useState } from "react";
 import OtpInput from "react-otp-input";
+import SubmitButton from "../../Components/Shared/Buttons/SubmitButton";
 
 const VerifyEmail = () => {
   const [otp, setOtp] = useState(null);
@@ -53,9 +54,10 @@ const VerifyEmail = () => {
                   onChange={(e) => handleOtp(e)}
                   value={otp}
                 />
-                <button className="btn-primary" type="submit">
+                {/* <button className="btn-primary" type="submit">
                   Verify
-                </button>
+                </button> */}
+                <SubmitButton text="Verify Email" />
               </div>
             </form>
           </div>
