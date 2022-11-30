@@ -18,8 +18,8 @@ module.exports = {
       white: "#FFFFFF",
     },
     fontFamily: {
-      lato: ["Lato"],
-      roboto: ["Roboto"],
+      lato: ["PT Sans"],
+      roboto: ["PT Sans"],
     },
     extend: {},
   },

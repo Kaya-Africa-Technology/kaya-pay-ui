@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import TextInputField from "../../components/Shared/Textinput/TextInputField";
+import TextInputField from "../../Components/Shared/TextInputField";
 
 import AuthSideImage from "../../Components/Shared/AuthSideImage";
+import SubmitButton from "../../Components/Shared/SubmitButton";
 // import "./Login.css";
 
 const Login = () => {
@@ -45,9 +46,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex h-screen bg-neutral-25">
-      <div className="relative flex-1">
-        <div className="absolute top-5 left-5">
+    <div className="flex h-screen lg:bg-neutral-25">
+      <div className="h-screen flex-1">
+        <div className="my-5 flex items-center justify-center lg:absolute lg:top-5 lg:left-5">
           <img src="/kaya_logo.svg" alt="Kaya logo" className="w-18" />
         </div>
         <div className="flex h-screen items-center justify-center align-middle">
@@ -72,15 +73,13 @@ const Login = () => {
                 ))}
                 <p className="text-right">
                   <Link
-                    className=" text-right font-lato font-normal text-neutral-60 underline-offset-4 hover:underline"
+                    className="text-right font-lato font-normal text-neutral-60 underline-offset-4 hover:underline"
                     to="/auth/resetpassword"
                   >
                     Forgot your password?
                   </Link>
                 </p>
-                <button className="btn-primary w-full" type="submit">
-                  Login
-                </button>
+                <SubmitButton text="Sign In" type="submit" />
               </div>
             </form>
             <p className="text-center">
