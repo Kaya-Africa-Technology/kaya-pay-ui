@@ -1,6 +1,6 @@
 import { useState } from "react";
 import OtpInput from "react-otp-input";
-import SubmitButton from "../../Components/Shared/Buttons/SubmitButton";
+import SubmitButton from "../../Components/Shared/SubmitButton";
 
 const VerifyEmail = () => {
   const [otp, setOtp] = useState(null);
@@ -14,7 +14,7 @@ const VerifyEmail = () => {
   return (
     <div className="flex h-screen">
       <div className="relative flex-1">
-        <div className="absolute top-5 left-5">
+        <div className="mt-5 flex items-center justify-center lg:absolute lg:top-5 lg:left-5">
           <img src="/kaya_logo.svg" alt="Kaya logo" className="w-18" />
         </div>
         <div className="flex h-screen items-center justify-center align-middle">

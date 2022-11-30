@@ -20,7 +20,7 @@ const TextInputField = (props) => {
   // };
   return (
     <div>
-      <label htmlFor={id} className="font-medium">
+      <label htmlFor={id} className="text-lg font-medium">
         {label}
       </label>
       <input

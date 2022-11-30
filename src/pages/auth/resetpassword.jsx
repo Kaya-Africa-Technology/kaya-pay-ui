@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import SubmitButton from "../../Components/Shared/Buttons/SubmitButton";
-import TextInputField from "../../components/Shared/Textinput/TextInputField";
+import SubmitButton from "../../Components/Shared/SubmitButton";
+import TextInputField from "../../Components/Shared/TextInputField";
 
 const ResetPassword = () => {
   return (
     <div className="flex h-screen">
-      <div className="relative flex-1">
-        <div className="absolute top-5 left-5">
+      <div className="h-screen flex-1">
+        <div className="my-5 flex items-center justify-center lg:absolute lg:top-5 lg:left-5">
           <img src="/kaya_logo.svg" alt="Kaya logo" className="w-18" />
         </div>
         <div className="flex h-screen items-center justify-center align-middle">

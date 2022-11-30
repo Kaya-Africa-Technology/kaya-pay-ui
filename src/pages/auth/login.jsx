@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import TextInputField from "../../components/Shared/Textinput/TextInputField";
+import TextInputField from "../../Components/Shared/TextInputField";
 
 import AuthSideImage from "../../Components/Shared/AuthSideImage";
-import SubmitButton from "../../Components/Shared/Buttons/SubmitButton";
+import SubmitButton from "../../Components/Shared/SubmitButton";
 // import "./Login.css";
 
 const Login = () => {
@@ -46,9 +46,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex h-screen bg-neutral-25">
-      <div className="relative flex-1">
-        <div className="absolute top-5 left-5">
+    <div className="flex h-screen lg:bg-neutral-25">
+      <div className="h-screen flex-1">
+        <div className="my-5 flex items-center justify-center lg:absolute lg:top-5 lg:left-5">
           <img src="/kaya_logo.svg" alt="Kaya logo" className="w-18" />
         </div>
         <div className="flex h-screen items-center justify-center align-middle">
