@@ -6,7 +6,7 @@ const RegisterUser = () => {
   return (
     <div className="flex h-screen bg-neutral-25">
       <div className="relative flex-1">
-        <div className="fixed top-5 left-5">
+        <div className="absolute top-5 left-5">
           <img src="/kaya_logo.svg" alt="Kaya logo" className="w-18" />
         </div>
         <div className="flex h-screen items-center justify-center align-middle">
@@ -15,7 +15,7 @@ const RegisterUser = () => {
             <p className="text-center ">Start your journey with us.</p>
             <div className="login-form">
               <form className="flex flex-col gap-y-4">
-                <div className="flex flex-col justify-center gap-y-4 space-y-0 lg:flex-row lg:items-center lg:space-x-5 lg:space-y-0">
+                <div className="flex flex-col justify-center space-y-0 lg:flex-row lg:items-center lg:space-x-5 lg:space-y-0">
                   <TextInputField
                     name="FirstName"
                     id="firstName"
