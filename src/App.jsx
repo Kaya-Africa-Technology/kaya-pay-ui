@@ -10,6 +10,7 @@ import PreRegister from "./pages/auth/preregister";
 import ResetPassword from "./pages/auth/resetpassword";
 import RegisterUser from "./pages/auth/registeruser";
 import VerifyEmail from "./pages/auth/verifyemail";
+import UpdatePassword from "./pages/auth/updatepassword";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="register" element={<RegisterUser />} />
           <Route path="verifyemail" element={<VerifyEmail />} />
           <Route path="resetpassword" element={<ResetPassword />} />
+          <Route path="updatepassword" element={<UpdatePassword />} />
         </Route>
         <Route path="/admin" element={<Admin />} />
         <Route path="/client" element={<Client />} />
