@@ -15,7 +15,4 @@ const AuthSideImage = ({ image, text }) => {
     </div>
   );
 };
-// /images/trucks.jpg
-// Save delivery costs and increase driver efficiency with our end-to-end
-// Pickup and delivery software.
 export default AuthSideImage;
