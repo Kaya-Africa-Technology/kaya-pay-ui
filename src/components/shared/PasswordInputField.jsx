@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { HiOutlineEyeOff, HiOutlineEye } from "react-icons/hi";
 
-const PasswordInputField = () => {
+const PasswordInputField = ({ label, name }) => {
   const [values, setValues] = useState({
     password: "",
     showPassword: false,
@@ -18,8 +18,8 @@ const PasswordInputField = () => {
 
   return (
     <div className="w-full">
-      <label htmlFor="password" className="text-lg font-medium">
-        Password
+      <label htmlFor={label} className="text-lg font-medium">
+        {label}
       </label>
       <div className="flex w-full items-center">
         <input
@@ -27,6 +27,7 @@ const PasswordInputField = () => {
           type={values.showPassword ? "text" : "password"}
           onChange={handlePasswordChange("password")}
           value={values.password}
+          name={name}
           id="password"
           placeholder="Enter your password"
         />
