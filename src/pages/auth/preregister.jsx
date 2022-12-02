@@ -1,4 +1,4 @@
-import Button from "../../Components/Shared";
+import Button from "../../Components/Shared/Button";
 import AuthSideImage from "../../Components/Shared/AuthSideImage";
 
 const PreRegister = () => {

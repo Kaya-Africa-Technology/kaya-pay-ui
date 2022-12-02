@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AuthSideImage from "../../Components/Shared/AuthSideImage";
+import PasswordInputField from "../../Components/Shared/PasswordInputField";
 import SubmitButton from "../../Components/Shared/SubmitButton";
 import TextInputField from "../../Components/Shared/TextInputField";
 
@@ -40,12 +41,13 @@ const RegisterUser = () => {
                   type="email"
                   label="Email Address"
                 />
-                <TextInputField
+                {/* <TextInputField
                   name="password"
                   id="password"
                   type="password"
                   label="Password"
-                />
+                /> */}
+                <PasswordInputField />
                 <p className="text-left text-xs">
                   by clicking sign up you agree to the terms and conditions
                 </p>
