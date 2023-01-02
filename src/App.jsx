@@ -10,6 +10,8 @@ import PreRegister from "./pages/auth/preregister";
 import ResetPassword from "./pages/auth/resetpassword";
 import RegisterUser from "./pages/auth/registeruser";
 import VerifyEmail from "./pages/auth/verifyemail";
+import UpdatePassword from "./pages/auth/updatepassword";
+import Dashboard from "./layouts/Dashboard";
 
 function App() {
   return (
@@ -22,10 +24,13 @@ function App() {
           <Route path="register" element={<RegisterUser />} />
           <Route path="verifyemail" element={<VerifyEmail />} />
           <Route path="resetpassword" element={<ResetPassword />} />
+          <Route path="updatepassword" element={<UpdatePassword />} />
         </Route>
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/client" element={<Client />} />
-        <Route path="/transporter" element={<Transporter />} />
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="admin" element={<Admin />} />
+          <Route path="client" element={<Client />} />
+          <Route path="transporter" element={<Transporter />} />
+        </Route>
         <Route path="*" element={<h1>404: Not found </h1>} />
       </Routes>
     </div>

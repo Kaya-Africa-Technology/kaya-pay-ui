@@ -1,20 +1,22 @@
-import Button from "../../Components/Shared";
+import Button from "../../Components/Shared/Button";
 import AuthSideImage from "../../Components/Shared/AuthSideImage";
 
 const PreRegister = () => {
   return (
-    <div className="flex h-screen overflow-hidden bg-neutral-25">
+    <div className="flex h-screen lg:overflow-hidden lg:bg-neutral-25">
       <AuthSideImage
         image="/images/trucks.jpg"
         text="Save delivery costs and increase driver efficiency with our end-to-end Pickup and delivery software."
       />
-      <div className="flex-1">
-        <div className="container mx-auto ml-10 mt-5">
-          <img src="/kaya_logo.svg" alt="Kaya logo" className="w-24" />
+      <div className="h-screen flex-1">
+        <div className="my-5 flex items-center justify-center lg:absolute lg:top-5 lg:left-5">
+          <img src="/kaya_logo.svg" alt="Kaya logo" className="w-18" />
         </div>
         <div className="flex h-screen items-center justify-center align-middle">
           <div className="flex w-11/12 flex-col space-y-6 md:w-3/5">
-            <h2 className="mb-6 text-center text-3xl font-bold">Sign Up</h2>
+            <h2 className="mb-6 text-center text-4xl font-extrabold">
+              Sign Up
+            </h2>
             <Button
               img="/icons/email.svg"
               alt="email logo"

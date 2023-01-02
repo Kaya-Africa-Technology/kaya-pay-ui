@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
+import PasswordInputField from "../../Components/Shared/PasswordInputField";
 import SubmitButton from "../../Components/Shared/SubmitButton";
-import TextInputField from "../../Components/Shared/TextInputField";
 
 const ResetPassword = () => {
   return (
@@ -15,14 +15,12 @@ const ResetPassword = () => {
               Reset your Password
             </h2>
             <p className="mb-6 text-center text-sm text-neutral-60/90">
-              Enter your Email Address to get a link to reset your Password
+              Enter your new secure password
             </p>
             <form className="flex flex-col  content-between justify-between gap-y-4">
-              <TextInputField
-                label="Email Address"
-                placeholder="Enter your Email Address"
-              />
-              <SubmitButton text="Send reset password link" type="submit" />
+              <PasswordInputField label="password" name="password" />
+              <PasswordInputField label="Confirm password" name="confirmPass" />
+              <SubmitButton text="Save" type="submit" />
             </form>
             <p className="text-center">
               Remember your password?{" "}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import OtpInput from "react-otp-input";
+import SubmitButton from "../../Components/Shared/SubmitButton";
 
 const VerifyEmail = () => {
   const [otp, setOtp] = useState(null);
@@ -11,41 +12,48 @@ const VerifyEmail = () => {
   };
   console.log("otp", otp);
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen overflow-hidden">
       <div className="relative flex-1">
-        <div className="absolute top-5 left-5">
+        <div className="mt-5 flex items-center justify-center lg:absolute lg:top-5 lg:left-5">
           <img src="/kaya_logo.svg" alt="Kaya logo" className="w-18" />
         </div>
         <div className="flex h-screen items-center justify-center align-middle">
-          <div className="w-full rounded-md  bg-neutral-25 px-10 py-10 sm:w-11/12 md:w-3/5 lg:w-1/2">
-            <h2 className="text-center text-3xl font-bold">
+          <div className="w-4/5 rounded-md bg-neutral-25 p-5 shadow-sm md:w-1/2 md:bg-neutral-25/50 lg:w-1/4 lg:bg-neutral-25/50 lg:p-10">
+            <h2 className="text-center text-2xl font-bold lg:text-3xl">
               Please check your email
             </h2>
-            <p className="mb-12 text-center">
+            <p className="mb-12 text-center text-sm text-neutral-60/90">
               We have sent a code to daniel@gmail.com
             </p>
             <form onSubmit={handleSubmit}>
               <div className="my-4 flex flex-col">
                 <OtpInput
                   numInputs={6}
-                  containerStyle="otpContainer"
+                  containerStyle={{
+                    width: "100%",
+                    gap: "5px",
+                    justifyContent: "space-between",
+                  }}
                   isInputNum
                   shouldAutoFocus
+                  placeholder="------"
+                  isInputSecure
                   // hasErrored={!!error}
                   inputStyle={{
                     border: "1px solid #211814",
                     borderRadius: "5px",
-                    width: "54px",
-                    height: "60px",
+                    width: "40px",
+                    height: "40px",
                     fontSize: "14px",
                     color: "#000",
                     backgroundColor: "#F3F3F11a",
                     fontWeight: "400",
-                    caretColor: "blue",
+                    caretColor: "gray",
                   }}
                   focusStyle={{
-                    border: "1px solid #000",
-                    boxShadow: "0px 0px 10px 0px #0000003f",
+                    border: "1px solid #211814",
+                    boxShadow: "0px 0px 2px 0px #0000003f",
+                    outline: "none",
                   }}
                   errorStyle={{
                     border: "1px solid #DE330D",
@@ -53,9 +61,10 @@ const VerifyEmail = () => {
                   onChange={(e) => handleOtp(e)}
                   value={otp}
                 />
-                <button className="btn-primary" type="submit">
+                {/* <button className="btn-primary" type="submit">
                   Verify
-                </button>
+                </button> */}
+                <SubmitButton text="Verify Email" />
               </div>
             </form>
           </div>

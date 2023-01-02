@@ -15,9 +15,11 @@ module.exports = {
       error: "#DE330D",
       info: "#6989FA",
       black: "#211814",
-      white: "#FFFFFF",
+      white: "#EDEDED",
+      sidebar: "#1B1B1B",
     },
     fontFamily: {
+      ptsans: ["PT Sans"],
       lato: ["Lato"],
       roboto: ["Roboto"],
     },
